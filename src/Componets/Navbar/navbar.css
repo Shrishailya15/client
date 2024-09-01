@@ -64,7 +64,7 @@ ul p{
     background-color: #078edd;
     border: none;
     width: 70px;
-       margin-left: 78px;
+    margin-left:81px;
     height: 25px;
     font-size: 16px;
     border-radius: 2px;
@@ -81,8 +81,8 @@ font-weight: 500;
     display: flex;
 }
 .admin{
-    position: absolute;
-    left: 85%;
+    position: relative;
+    left: 35%;
     margin-top: 24px;
 }
 .admin button{
@@ -91,7 +91,6 @@ font-weight: 500;
     background-color: #078edd;
     border: none;
     width: 70px;
-       margin-left: 78px;
     height: 25px;
     font-size: 16px;
     border-radius: 2px;
@@ -112,9 +111,7 @@ font-weight: 500;
     .nav1{
      display: none;
     }
-    .admin{
-      display: none;
-    }
+   
    }
  
    #cross{

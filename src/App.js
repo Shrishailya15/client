@@ -4,6 +4,7 @@ import Home from './Componets/Home/Home';
 import Navbar from './Componets/Navbar/Navbar';
 import { Routes,Route } from 'react-router-dom'; 
 import Register from './Componets/auth/Register';
+import LoginPage from './Componets/auth/LoginPage';
 import Intern from "./Componets/Internships/Intern"
 import JobAvl from "./Componets/Job/JobAvl"
 import JobDetail from './Componets/Job/JobDetail';
@@ -17,9 +18,13 @@ import AdminLogin from './Admin/AdminLogin';
 import Adminpanel from './Admin/Adminpanel';
 import ViewAllApplication from "./Admin/ViewAllApplication"
 import Postinternships from './Admin/Postinternships';
+import PostJob from './Admin/PostJob';
 import DeatilApplication from './Applications/DeatilApplication';
 import UserApplicatiom from './profile/UserApplicatiom';
-import UserapplicationDetail from "./Applications/DeatilApplicationUser"
+import UserapplicationDetail from "./Applications/DeatilApplicationUser";
+
+
+
 function App() {
   const user=useSelector(selectUser);
   const dispatch=useDispatch();
@@ -49,7 +54,8 @@ function App() {
 <Routes>
   <Route path='/' element={<Home/>}/>
 <Route path='/register' element={<Register/>}/>
-<Route path='/internship' element={<Intern/>}/>
+<Route path='/loginpage' element={<LoginPage/>}/>
+<Route path='/Internship' element={<Intern/>}/>
 <Route path='/Jobs' element={<JobAvl/>}/>
 <Route path='/profile' element={<Profile/>}/>
 <Route path='/detailjob' element={<JobDetail/>}/>
@@ -58,9 +64,12 @@ function App() {
 <Route path='/adminLogin' element={<AdminLogin/>}/>
 <Route path='/adminepanel' element={<Adminpanel/>}/>
 <Route path='/postInternship' element={<Postinternships/>}/>
+<Route path='/postJob' element={<PostJob/>}/>
 <Route path='/applications' element={<ViewAllApplication/>}/>
 <Route path='/UserapplicationDetail' element={< UserapplicationDetail/>}/>
 <Route path='/userapplication' element={<UserApplicatiom/>}/>
+
+
 </Routes>
 <Footer/>
     </div>
