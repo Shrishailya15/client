@@ -15,7 +15,7 @@ function UserApplicatiom() {
     useEffect(()=>{
         const fetchApplication= async()=>{
         try {
-            const response=await axios.get("http://localhost:5000/api/application")
+            const response=await axios.get("https://internbackend-i2jk.onrender.com/api/application")
 setApplication(response.data)
 
         } catch (error) {

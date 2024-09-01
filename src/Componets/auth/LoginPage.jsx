@@ -26,7 +26,7 @@ function LoginPage() {
                 passwordd: passwordd,
             };
             console.log(bodyJson)
-            axios.post("http://localhost:5000/api/login", bodyJson)
+            axios.post("https://internbackend-i2jk.onrender.com/api/login", bodyJson)
                 .then((res) => {
                     if (res.status === 201) {
                         toast.success(res.data.message);

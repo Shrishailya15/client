@@ -21,7 +21,7 @@ function JobDetail() {
   const [data, setData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`http://localhost:5000/api/job/${id}`)
+      const response = await axios.get(`https://internbackend-i2jk.onrender.com/api/job/${id}`)
 
       const { company, category } = response.data;
       setCompany(company)
@@ -57,7 +57,7 @@ function JobDetail() {
         Application: id
       }
 
-      await axios.post("http://localhost:5000/api/application", bodyJson).then((res) => {
+      await axios.post("https://internbackend-i2jk.onrender.com/api/application", bodyJson).then((res) => {
 
 
 
@@ -93,7 +93,7 @@ function JobDetail() {
   
     try {
       // Step 1: Create an order on your backend
-      const response = await axios.post('http://localhost:5000/api/rasorpay/checkout', {
+      const response = await axios.post('https://internbackend-i2jk.onrender.com/api/rasorpay/checkout', {
         amount: 5000, // Example amount; replace with actual amount
       });
       const { order } = response.data;
@@ -109,7 +109,7 @@ function JobDetail() {
         handler: async (response) => {
           try {
             // Step 3: Verify payment on the backend
-            const verificationResponse = await axios.post('http://localhost:5000/api/rasorpay/paymentverification', {
+            const verificationResponse = await axios.post('https://internbackend-i2jk.onrender.com/api/rasorpay/paymentverification', {
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
@@ -136,7 +136,7 @@ function JobDetail() {
             data.append('details', formData.details);
             if (photo) data.append('photo', photo);
   
-            await axios.post('http://localhost:5000/api/resume', data);
+            await axios.post('https://internbackend-i2jk.onrender.com/api/resume', data);
             alert('Resume created successfully!');
             setFormData({ name: '', qualification: '', experience: '', details: '' });
             setPhoto(null);
